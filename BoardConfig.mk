@@ -24,7 +24,13 @@ DEVICE_PATH := device/asus/I003D
 # Inherit from asus sm8250-common
 -include device/asus/sm8250-common/BoardConfigCommon.mk
 
+# fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+
 # Prebuilts
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+
+# TWRP Flags
+TW_HAPTICS_TSPDRV := true
