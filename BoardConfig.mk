@@ -34,4 +34,4 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # TWRP Flags
 TW_HAPTICS_TSPDRV := true
-TW_NO_USB_STORAGE := true
+
