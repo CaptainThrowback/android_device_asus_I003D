@@ -40,7 +40,7 @@ product                                                 /product               e
 vendor                                                  /vendor                ext4    ro,barrier=1,discard                                                                          wait,slotselect
 odm                                                     /odm                   ext4    ro,barrier=1,discard                                                                          wait,slotselect
 /dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard                                                                  wait,formattable,wrappedkey
-/dev/block/bootdevice/by-name/userdata                  /data                  ext4    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier              wait,check,formattable,fileencryption=ice:aes-256-cts,wrappedkey,keydirectory=/metadata/vold/metadata_encryption
+/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier              wait,check,formattable,fileencryption=ice:aes-256-cts,wrappedkey,keydirectory=/metadata/vold/metadata_encryption
 /dev/block/bootdevice/by-name/persist                   /persist               ext4    noatime,nosuid,nodev,barrier=1                                                                wait
 /dev/block/bootdevice/by-name/batinfo                   /batinfo               ext4    noatime,nosuid,nodev,barrier=1                                                                wait
 

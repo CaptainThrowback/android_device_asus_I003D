@@ -22,7 +22,3 @@
 
 # Inherit from asus sm8250-common
 $(call inherit-product, device/asus/sm8250-common/common.mk)
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
