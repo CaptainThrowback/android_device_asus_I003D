@@ -35,16 +35,11 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 #<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                                                                       <fs_mgr_flags>
+# Logical partitions
 system                                                  /system                ext4    ro,barrier=1,discard                                                                          wait,slotselect
 product                                                 /product               ext4    ro,barrier=1,discard                                                                          wait,slotselect
 vendor                                                  /vendor                ext4    ro,barrier=1,discard                                                                          wait,slotselect
 odm                                                     /odm                   ext4    ro,barrier=1,discard                                                                          wait,slotselect
-/dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard                                                                  wait,formattable,wrappedkey
-/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier              wait,check,formattable,fileencryption=ice:aes-256-cts,wrappedkey,keydirectory=/metadata/vold/metadata_encryption
-/dev/block/bootdevice/by-name/persist                   /persist               ext4    noatime,nosuid,nodev,barrier=1                                                                wait
-/dev/block/bootdevice/by-name/batinfo                   /batinfo               ext4    noatime,nosuid,nodev,barrier=1                                                                wait
 
-/dev/block/bootdevice/by-name/modem                     /firmware              vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0  wait,slotselect
-/dev/block/bootdevice/by-name/boot                      /boot                  emmc    defaults                                                                                      slotselect
-/dev/block/bootdevice/by-name/recovery                  /recovery              emmc    defaults                                                                                      slotselect
-/dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                                                                      defaults
+# Userdata partition
+/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier              wait,check,formattable,fileencryption=ice:aes-256-cts,wrappedkey,keydirectory=/metadata/vold/metadata_encryption
