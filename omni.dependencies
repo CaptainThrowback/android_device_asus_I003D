@@ -1,8 +1,8 @@
 [
   {
     "remote": "CPTB",
-    "repository": "android_device_asus_sm8250-common",
-    "target_path": "device/asus/sm8250-common",
+    "repository": "android_device_qcom_twrp-common",
+    "target_path": "device/qcom/twrp-common",
     "revision": "android-10"
   }
 ]
