@@ -19,18 +19,15 @@
 # product configuration (apps).
 #
 
-DEVICE_PATH := device/asus/I003D
+DEVICE_PATH := device/$(PRODUCT_BRAND)/$(TARGET_DEVICE)
 
 # Inherit from asus sm8250-common
--include device/asus/sm8250-common/BoardConfigCommon.mk
-
-# fstab
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+-include device/$(PRODUCT_BRAND)/sm8250-common/BoardConfigCommon.mk
 
 # Prebuilts
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 
 # TWRP Flags
 TW_HAPTICS_TSPDRV := true
