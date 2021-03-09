@@ -20,5 +20,5 @@
 # product configuration (apps).
 #
 
-# Inherit from asus sm8250-common
-$(call inherit-product, device/asus/sm8250-common/common.mk)
+# Inherit from OEM SOC-common
+$(call inherit-product, device/$(BOARD_VENDOR)/$(COMMON_SOC)-common/common.mk)
