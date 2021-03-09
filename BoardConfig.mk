@@ -22,7 +22,7 @@
 DEVICE_PATH := device/$(PRODUCT_BRAND)/$(TARGET_DEVICE)
 
 # Inherit from asus sm8250-common
--include device/$(PRODUCT_BRAND)/sm8250-common/BoardConfigCommon.mk
+-include device/$(PRODUCT_BRAND)/$(COMMON_SOC)-common/BoardConfigCommon.mk
 
 # Prebuilts
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img

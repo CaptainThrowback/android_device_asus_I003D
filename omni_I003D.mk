@@ -14,16 +14,22 @@
 # limitations under the License.
 #
 
-# Release name
-PRODUCT_RELEASE_NAME := I003D
-
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
+
+# OEM Info
+BOARD_VENDOR := asus
+
+# Identifier for common folder
+COMMON_SOC := sm8250
+
+# Release name
+PRODUCT_RELEASE_NAME := I003D
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_NAME := omni_$(PRODUCT_DEVICE)
-PRODUCT_BRAND := asus
+PRODUCT_BRAND := $(BOARD_VENDOR)
 PRODUCT_MODEL := $(shell echo $(PRODUCT_BRAND) | tr  '[:lower:]' '[:upper:]')_$(PRODUCT_DEVICE)
 PRODUCT_MANUFACTURER := $(PRODUCT_BRAND)
 
