@@ -23,6 +23,9 @@ BOARD_VENDOR := asus
 # Identifier for common folder
 COMMON_SOC := sm8250
 
+# Define hardware platform
+PRODUCT_PLATFORM := kona
+
 # Release name
 PRODUCT_RELEASE_NAME := I003D
 
